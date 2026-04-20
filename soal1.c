@@ -1,7 +1,14 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
-#include <math.h>
+
+int m_floor(double x) {
+    int i = (int)x;
+    if (x < 0 && x != i) {
+        return i - 1;
+    }
+    return i;
+}
 
 int main(void) {
     int num_count, nums[1024 * 1024];
@@ -53,7 +60,7 @@ int main(void) {
             }
 
             if(valid_kanan != 0 && valid_kiri != 0) {
-                recovered = floor(((double)valid_kanan + (double)valid_kiri) / 2.0f);
+                recovered = m_floor(((double)valid_kanan + (double)valid_kiri) / 2.0f);
             }
             else if(valid_kanan != 0) {
                 recovered = valid_kanan;
