@@ -41,8 +41,8 @@ int main(void) {
 
     for(int i = 1; i < num_count-1; ++i) {
         if(nums[i] == -1) {
-            int valid_kiri = 0;
-            int valid_kanan = 0;
+            int valid_kiri = -1;
+            int valid_kanan = -1;
             int recovered = 0;
 
             for(int j = i+1; j < num_count; ++j) {
@@ -59,13 +59,13 @@ int main(void) {
                 }
             }
 
-            if(valid_kanan != 0 && valid_kiri != 0) {
+            if(valid_kanan != -1 && valid_kiri != -1) {
                 recovered = m_floor(((double)valid_kanan + (double)valid_kiri) / 2.0f);
             }
-            else if(valid_kanan != 0) {
+            else if(valid_kanan != -1) {
                 recovered = valid_kanan;
             }
-            else if(valid_kiri != 0) { 
+            else if(valid_kiri != -1) { 
                 recovered = valid_kiri;
             }
 
