@@ -1,5 +1,15 @@
+/** EL2008 Praktikum Pemecahan Masalah dengan Pemrograman 2026/2027
+ *  Modul               : 02 - Data Manipulation and External File
+ *  Hari dan Tanggal    : Senin, 20 April 2026
+ *  Nama (NIM)          : Arvin Fauzan Badri (13224072)
+ *  Nama File           : soal1.c
+ *  Deskripsi           : Soal 2. Memulihkan elemen array yang hilang, lalu mencari jumlah maksimum subarray 
+ * 
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
+
 
 int m_floor(double x) {
     int i = (int)x;
