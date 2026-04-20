@@ -12,11 +12,8 @@
 
 
 int m_floor(double x) {
-    int i = (int)x;
-    if (x < 0 && x != i) {
-        return i - 1;
-    }
-    return i;
+    if (x != (int)x && x < 0) return (int)(x) - 1;
+    return (int)(x);
 }
 
 int main(void) {
