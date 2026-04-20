@@ -53,7 +53,7 @@ int main(void) {
             }
 
             if(valid_kanan != 0 && valid_kiri != 0) {
-                recovered = (valid_kanan + valid_kiri) / 2;
+                recovered = floor(((double)valid_kanan + (double)valid_kiri) / 2.0f);
             }
             else if(valid_kanan != 0) {
                 recovered = valid_kanan;
